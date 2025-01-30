@@ -40,7 +40,7 @@ const Home = () => {
     // setPivotDate 상태 생성
 
     const monthlyData = getMonthlyData(pivotDate, data);
-    console.log(monthlyData)
+    // console.log(monthlyData)
 
     const onIncreaseMonth = () => {
         setPivotDate(new Date(pivotDate.getFullYear(), pivotDate.getMonth() + 1))
@@ -57,7 +57,8 @@ const Home = () => {
             leftchild={<Button onClick={onDecreaseMonth} text={"<"}/>}
             rightchild={<Button onClick={onIncreaseMonth} text={">"}/>}
             />
-            <DiaryList/>
+            <DiaryList data={monthlyData}/>
+            {/* monthlydata를 data props로 저장 */}
         </div>
     )
 }

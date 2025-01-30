@@ -2,7 +2,7 @@ import './DiaryList.css';
 import Button from './Button'
 import DiaryItem from './DiaryItem';
 
-const DiaryList = () => {
+const DiaryList = ({data}) => {
     return (
         <div className='DiaryList'>
             <div className='menu_bar'>
@@ -16,7 +16,8 @@ const DiaryList = () => {
                 />
             </div>
             <div className='list_wraper'>
-                <DiaryItem/>
+                {data.map((item) => <DiaryItem key={item.id} {...item}/>)}
+                {/* map 메서드로 리스트를 렌더링하도록 구현 */}
             </div>
         </div>
     )
