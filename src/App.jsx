@@ -1,5 +1,5 @@
 import './App.css';
-import { useReducer, useRef, createContext, useEffect, act, useState } from 'react';
+import { useReducer, useRef, createContext, useEffect, useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import Diary from './pages/Diary';
